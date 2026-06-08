@@ -12,7 +12,7 @@ DAO layer: is responsible for data access.
 
 This structure makes the project easier to understand, maintain, and extend. It also follows a more common backend development style used in real Spring Boot projects.
 
-
+This version also uses Spring's IoC container and Dependency Injection. Instead of manually creating objects with new, the Controller depends on the Service, and the Service depends on the DAO through Spring-managed beans.
 
 
 ## Project Structure
