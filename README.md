@@ -1,33 +1,43 @@
-# Spring Boot User List Demo
+# Spring Boot User List Demo Update
 
-MY FIRST Web of Springboot :)
+The original demo project used a simple structure and did not clearly separate the business logic into different layers.
 
-This is a simple Spring Boot web project that reads user data from a local text file and displays the user list on a web page.
+In this upgraded version, I refactored the project using a three-layer architecture:
+
+Controller layer: handles HTTP requests and returns responses.
+
+Service layer: contains the business logic.
+
+DAO layer: is responsible for data access.
+
+This structure makes the project easier to understand, maintain, and extend. It also follows a more common backend development style used in real Spring Boot projects.
 
 
-
-## Technologies Used
-
-- Java
-- Spring Boot
-- Spring Web
-- Lombok
-- HTML
-- JavaScript
 
 
 ## Project Structure
 
 ```text
-src
-├── main
-│   ├── java
-│   │   └── com.example.demo
-│   │       ├── controller
-│   │       │   └── UserController.java
-│   │       └── pojo
-│   │           └── User.java
-│   └── resources
-│       ├── static
-│       │   └── user.html
-│       └── user.txt# springboot-user-list-demo
+springboot-web-01
+├── .mvn/                           # Maven wrapper configuration
+├── src/
+│   └── main/
+│       └── java/
+│           └── com.yunhan.springbootweb01/
+│               ├── controller/
+│               │   └── UserController.java
+│               │
+│               ├── dao/
+│               │   ├── UserDao.java
+│               │   └── impl/
+│               │
+│               ├── pojo/
+│               │   └── User.java
+│               │
+│               ├── service/
+│               │   ├── UserService.java
+│               │   │  
+│               │   └── impl/
+│               │
+│               └── SpringbootWeb01Application.java
+│                  
